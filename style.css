@@ -1,0 +1,489 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(
+        #1354A5 0%,
+        #041832 33.33%,
+        #041832 66.67%,
+        #01080E 100%
+    );
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Inter', sans-serif;
+
+    color: white;
+}
+
+
+/* ==========================================
+   FUNDO
+   ========================================== */
+
+body::before {
+    background-image: url("img/code.png");
+
+    background-repeat: no-repeat;
+
+    background-position: right;
+
+    background-size: cover;
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.4;
+
+    z-index: -1;
+}
+
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+
+.container {
+    width: 1200px;
+
+    height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 24px;
+
+    border: 1px solid #1875E8;
+
+    box-shadow:
+        4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+
+    background-image: url("img/Ruido.png");
+
+    background-size: 100% 100%;
+
+    position: relative;
+}
+
+
+.container__conteudo {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.container__informacoes {
+    width: 90%;
+
+    padding: 20px;
+}
+
+
+/* ==========================================
+   CONTROLE DAS TELAS
+   ========================================== */
+
+.tela__identificacao {
+    display: block;
+}
+
+
+.tela__inicio {
+    display: none;
+}
+
+
+.tela__jogo {
+    display: none;
+}
+
+
+/* ==========================================
+   TEXTOS
+   ========================================== */
+
+.container__texto {
+    margin-bottom: 30px;
+}
+
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+
+    font-size: 72px;
+}
+
+
+h2 {
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-top: 10px;
+}
+
+
+p {
+    font-size: 18px;
+
+    margin-top: 8px;
+}
+
+
+/* ==========================================
+   CADASTRO DO JOGADOR
+   ========================================== */
+
+.container__cadastro {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 400px;
+}
+
+
+.container__cadastro label {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.container__cadastro input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    border: 1px solid #1875E8;
+
+    color: #041832;
+
+    font-size: 18px;
+}
+
+
+.container__cadastro input:focus {
+    outline: none;
+
+    border: 2px solid #1875E8;
+}
+
+
+/* ==========================================
+   ÁREA DO JOGO
+   ========================================== */
+
+.container__jogo {
+    margin-top: 30px;
+}
+
+
+.container__jogo label {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.container__jogo input {
+    width: 250px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #1875E8;
+
+    color: #041832;
+
+    font-size: 18px;
+}
+
+
+.container__jogo input:focus {
+    outline: none;
+
+    border: 2px solid #1875E8;
+}
+
+
+/* ==========================================
+   BOTÕES
+   ========================================== */
+
+.container__jogo button,
+.container__cadastro button {
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1875E8;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.container__jogo button {
+    margin-left: 8px;
+}
+
+
+.container__cadastro button {
+    width: 150px;
+
+    margin-top: 5px;
+}
+
+
+.container__jogo button:hover,
+.container__cadastro button:hover {
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   RESULTADO
+   ========================================== */
+
+.container__resultado {
+    margin-top: 30px;
+}
+
+
+#mensagem {
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+#tentativas {
+    color: #1875E8;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   MODAL
+   ========================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+
+.modal__conteudo {
+    width: 450px;
+
+    padding: 40px;
+
+    background: #041832;
+
+    border: 1px solid #1875E8;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 30px rgba(24, 117, 232, 0.5);
+}
+
+
+.modal__conteudo h2 {
+    color: white;
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
+
+.modal__conteudo p {
+    margin-bottom: 15px;
+}
+
+
+#modalTentativas {
+    color: #1875E8;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   BOTÃO JOGAR NOVAMENTE
+   ========================================== */
+
+#btnJogarNovamente {
+    margin-top: 20px;
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1875E8;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#btnJogarNovamente:hover {
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   BOTÃO FECHAR MODAL
+   ========================================== */
+
+#btnFecharModal {
+    margin-top: 20px;
+
+    margin-left: 8px;
+
+    padding: 12px 24px;
+
+    border: 1px solid #1875E8;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#btnFecharModal:hover {
+    background: #1875E8;
+
+    color: white;
+}
+
+
+/* ==========================================
+   BOTÃO SAIR DO JOGO
+   ========================================== */
+
+#btnSairJogo {
+    margin-left: 8px;
+
+    padding: 12px 24px;
+
+    border: 1px solid #1875E8;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#btnSairJogo:hover {
+    background: #1875E8;
+
+    color: white;
+}
+
+.rodape {
+    position: absolute;
+
+    bottom: 15px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    opacity: 0.7;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jogo de Adivinhação</title>
+</head>
+
+<body>
+
+    <!-- Área principal do jogo -->
+    <div class="container">
+
+        <div class="container__conteudo">
+
+            <div class="container__informacoes">
+
+                <!-- TELA DE IDENTIFICAÇÃO -->
+                <div class="tela__identificacao" id="telaIdentificacao">
+
+                    <div class="container__texto">
+
+                        <h1>
+                            Jogo de
+                            <span class="container__texto-azul">Adivinhação</span>
+                            
+                        </h1>
+
+                        <h2>
+                            Antes de começar, identifique-se.
+                        </h2>
+
+                    </div>
+
+                    <div class="container__cadastro">
+
+                        <label for="nome">
+                            Nome:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                        >
+
+                        <label for="idade">
+                            Idade:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="idade"
+                            placeholder="Digite sua idade"
+                            min="1"
+                            max="120"
+                        >
+
+                        <button id="btnEntrar">
+                            Entrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TELA INICIAL -->
+                <div class="tela__inicio" id="telaInicio">
+
+                    <div class="container__texto">
+
+                        <h1>
+                            Olá,
+                            <span class="container__texto-azul" id="nomeJogador">
+                                Jogador
+                            </span>!
+                        </h1>
+
+                        <h2>
+                            Pronto para jogar?
+                        </h2>
+
+                        <p>
+                            Descubra o número secreto e tente acertar com o menor número de tentativas.
+                        </p>
+
+                    </div>
+
+                    <div class="container__jogo">
+
+                        <button id="btnIniciarJogo">
+                            INICIAR JOGO
+                        </button>
+
+                        <button id="btnSairJogo">
+                            SAIR DO JOGO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TELA DO JOGO -->
+                <div class="tela__jogo" id="telaJogo">
+
+                    <div class="container__texto">
+
+                        <h1>
+                            Tente descobrir o
+                            <span class="container__texto-azul">
+                                número secreto!
+                            </span>
+                        </h1>
+
+                        <h2>
+                            Escolha um número entre 1 e 10.
+                        </h2>
+
+                    </div>
+
+                    <div class="container__jogo">
+
+                        <label for="palpite">
+                            Digite seu palpite:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="palpite"
+                            min="1"
+                            max="10"
+                            placeholder="Digite um número"
+                        >
+
+                        <button id="btnAdivinhar">
+                            Adivinhar
+                        </button>
+
+                    </div>
+
+                    <div class="container__resultado">
+
+                        <p id="mensagem">
+                            Boa sorte!
+                        </p>
+
+                        <p>
+                            Tentativas:
+                            <span id="tentativas">0</span>
+                        </p>
+
+                        <p>
+                            Versão 1.0 (Beta)
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    </div>
+    <!-- RODAPÉ -->
+        <footer class="rodape">
+           Jogo de Adivinhação • Versão 1.0 (Beta)
+        </footer>
+
+    <!-- MODAL DE VITÓRIA -->
+    <div class="modal" id="modalVitoria">
+
+        <div class="modal__conteudo">
+
+            <h2>
+                🎉 Parabéns!
+            </h2>
+
+            <p>
+                Você acertou o número secreto!
+            </p>
+
+            <p>
+                Tentativas:
+                <span id="modalTentativas">0</span>
+            </p>
+
+            <button id="btnJogarNovamente">
+                Jogar novamente
+            </button>
+
+            <button id="btnFecharModal">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js" defer></script>
+
+</body>
+
+</html>
